@@ -50,14 +50,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     context.job_queue.run_repeating(
         send_rhyme,
-        interval=15 * 60,
+        interval=3 * 60,
         first=5,
         name=str(chat_id),
         data=chat_id,
     )
 
     await update.message.reply_text(
-        "🎉 Бот запущен! Каждые 15 минут буду присылать смешные рифмы про Мику и Микаэла!\n\n"
+        "🎉 Бот запущен! Каждые 3 минуты буду присылать смешные рифмы про Мику и Микаэла!\n\n"
         "Команды:\n"
         "/start — запустить бота\n"
         "/stop — остановить\n"

@@ -81,9 +81,7 @@ async def rhyme(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    if not token:
-        raise ValueError("Нужен TELEGRAM_BOT_TOKEN в переменных окружения")
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "8517931211:AAHt1tA3VEjDjR3iOTVz3Ogo4yXF5OqF7Dw")
 
     app = Application.builder().token(token).build()
 
